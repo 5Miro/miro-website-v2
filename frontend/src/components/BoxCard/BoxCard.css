@@ -1,0 +1,94 @@
+.box-card {
+	/*background-color: orange;*/
+	max-width: 120rem;
+	margin: 8rem auto;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12),
+		0 4px 4px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.2);
+	transition: box-shadow 0.1s linear;
+	border-radius: 1.5rem;
+	flex-wrap: nowrap !important;
+}
+
+.box-card:hover {
+	box-shadow: 0 1px 1px rgba(252, 81, 133, 0.08),
+		0 2px 2px rgba(252, 81, 133, 0.12), 0 4px 4px rgba(252, 81, 133, 0.16),
+		0 8px 8px rgba(252, 81, 133, 0.2);
+}
+
+.box-card > div {
+	position: relative;
+	max-width: 60rem;
+	padding-top: 33.33%;
+}
+
+.box-left {
+	/*background-color: greenyellow;*/
+	background-image: linear-gradient(to bottom, #fff, #f4f4f4);
+	border-radius: 1.5rem 0 0 1.5rem;
+}
+.box-right {
+	/*background-color: greenyellow;*/
+	background-image: linear-gradient(to bottom, #fff, #f4f4f4);
+	border-radius: 0 1.5rem 1.5rem 0;
+}
+
+img.card {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+img.card.left {
+	border-radius: 1.5rem 0 0 1.5rem;
+}
+
+img.card.right {
+	border-radius: 0 1.5rem 1.5rem 0;
+}
+
+.info-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: grid;
+	align-items: center;
+	grid-template-columns: 1fr;
+	grid-template-rows: 2fr 1fr 2fr;
+}
+
+.info-container .row {
+	justify-content: flex-end;
+}
+
+.box-card h4 {
+	text-align: center;
+	font-size: 6.5rem;
+	font-weight: 300;
+	margin: 0;
+	color: #333;
+}
+.box-card p {
+	text-align: center;
+	font-size: 2rem;
+	text-transform: capitalize;
+	font-weight: 300;
+	margin: 0;
+	color: #333;
+}
+
+.col-1.tech {
+	flex: 0 1 25rem;
+	font-size: 2.2rem;
+	margin-bottom: 1rem;
+	color: #333;
+}
+
+.icon-pink {
+	color: #f385b2;
+}

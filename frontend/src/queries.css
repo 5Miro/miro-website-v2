@@ -1,0 +1,100 @@
+@media screen and (max-width: 1366px) {
+}
+
+/** Extra large devices (large desktops, 1200px and up) */
+
+@media screen and (max-width: 1200px) {
+	.box-card {
+		margin: 8rem 1rem;
+	}
+	.box-left {
+		border-radius: 1.5rem 1.5rem 0 0;
+	}
+	.box-right {
+		border-radius: 0 0 1.5rem 1.5rem;
+	}
+	img.card.left {
+		border-radius: 1.5rem 1.5rem 0 0;
+	}
+	img.card.right {
+		border-radius: 0 0 1.5rem 1.5rem;
+	}
+	#nav-fullscreen {
+		font-size: 8rem !important;
+	}
+}
+
+/** Large devices (desktops, 992px and up) */
+
+@media screen and (max-width: 992px) {
+}
+
+/** Medium devices (tablets, 768px and up) */
+
+@media screen and (max-width: 768px) {
+	.box-card {
+		flex-wrap: wrap !important;
+	}
+}
+
+@media screen and (max-width: 768px) and (min-width: 577px) {
+}
+
+/** Small devices (landscape phones, 576px and up) */
+
+@media screen and (max-width: 600px) {
+	.box-card > div {
+		padding-top: 66.66%;
+	}
+	.hero h1 {
+		font-size: 8rem;
+	}
+	.hero h2 {
+		font-size: 3rem;
+	}
+	.col-1.center {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 479px) {
+	#nav-fullscreen {
+		font-size: 4rem !important;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.hero h1 {
+		font-size: 6rem;
+	}
+	.hero h2 {
+		font-size: 2rem;
+	}
+
+	.welcome h2 {
+		font-size: 3rem;
+	}
+
+	h2 {
+		font-size: 4rem;
+	}
+
+	h3 {
+		font-size: 1.8rem;
+	}
+	.col-1.tech {
+		flex: 0 1 15rem;
+		font-size: 1.5rem;
+	}
+	.box-card h4 {
+		font-size: 3.5rem;
+	}
+
+	.col-1.half-screen {
+		width: 80%;
+	}
+
+	footer h2 {
+		font-size: 5rem;
+	}
+}

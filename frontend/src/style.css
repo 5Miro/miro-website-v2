@@ -1,0 +1,374 @@
+html {
+	font-size: 62.5%; /* default is 16px. 62.5% of 16px is 10px. So 1 rem is 10 px*/
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	height: 100vh;
+	font-size: 2rem;
+	font-family: "Open Sans", Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 300;
+}
+
+/* Hide scrollbar */
+body::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+a {
+	all: unset;
+}
+
+*:focus {
+	outline: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+
+h2 {
+	font-size: 6rem;
+	word-spacing: 0.2em;
+	letter-spacing: 0.1rem;
+	margin: 1rem auto;
+	color: #333;
+	font-weight: 200;
+	text-align: center;
+}
+
+h2:after {
+	display: block;
+	height: 0.4rem;
+	background-color: #f385b2;
+	content: " ";
+	width: 10rem;
+	margin: 3rem auto 3rem auto;
+	border-radius: 0.5rem;
+}
+
+h3 {
+	font-size: 2.2rem;
+	word-spacing: 0.2em;
+	font-weight: 300;
+	margin: 0rem 0.5rem;
+	text-align: center;
+}
+
+p {
+	color: #555;
+	margin: 0 auto 0 auto;
+	text-align: left;
+	line-height: 165%;
+	word-spacing: 2px;
+}
+
+#root {
+	height: 100%;
+}
+
+/* Layout GRID */
+
+.grid-container {
+	display: grid;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+	grid-template-columns: 1fr;
+	grid-template-rows: 100vh 1fr 35rem;
+}
+
+header {
+	grid-area: header;
+	display: grid;
+	grid-template-areas:
+		"nav"
+		"hero"
+		"shape"
+		"welcome";
+	background-color: #11101a;
+	grid-template-columns: 1fr;
+	grid-template-rows: 8rem 1fr 12rem 12rem;
+	background-image: url("../src/hero-background.png");
+	background-size: cover;
+	background-position-y: -80%;
+}
+
+.nav {
+	grid-area: nav;
+	/**background-color: blue;*/
+	color: #f4f4f4;
+}
+
+.hero {
+	grid-area: hero;
+	/**background-color: darkred;*/
+	margin: auto;
+	text-align: center;
+}
+.welcome {
+	grid-area: welcome;
+	/**background-color: green;*/
+	background-color: #f4f4f4;
+	text-align: center;
+	color: #cacaca;
+	position: relative;
+}
+
+main {
+	grid-area: main;
+	/*background-color: aquamarine;*/
+	background-color: #f4f4f4;
+	padding: 0rem;
+}
+
+#myWork {
+	/*background-color: orange;*/
+}
+#aboutMe {
+	background-color: #fff;
+}
+#letsTalk {
+	background-color: #fff;
+}
+
+footer {
+	grid-area: footer;
+	/*background-color: #135ca5;*/
+	background-color: #11101a;
+	color: #fff;
+}
+
+/* FLEXBOX */
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.row.center {
+	justify-content: center;
+}
+
+.row.top {
+	align-items: flex-start;
+}
+
+.col-1 {
+	flex: 1 1 20rem;
+}
+
+.col-1.small {
+	flex: 1 1 10rem;
+}
+.col-1.medium {
+	flex: 1 1 25rem;
+}
+.col-1.large {
+	flex: 1 1 60rem;
+}
+
+.col-1.half-screen {
+	margin: 0 auto;
+	width: 60%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 3fr;
+	margin-bottom: 8rem;
+}
+
+.col-1.half-screen > div > div {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem;
+}
+.col-1-title {
+}
+.col-1-content {
+}
+
+img {
+}
+img.small {
+	max-width: 5rem;
+	width: 100%;
+}
+
+img.medium {
+	max-width: 29rem;
+	width: 100%;
+}
+
+img.large {
+	width: 100%;
+}
+
+/* NAV */
+
+.brand {
+	margin-left: 4rem;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	font-size: 2rem;
+	position: relative;
+	z-index: 101;
+	cursor: pointer;
+	color: #f4f4f4;
+	transition: color 0.2s;
+}
+
+.brand:hover,
+.brand:active {
+	color: #5ecea7;
+}
+
+.nav .left {
+	text-align: left;
+	/**background-color: cadetblue;*/
+}
+.nav .center {
+	text-align: center;
+	/*background-color: rgb(67, 112, 114);*/
+}
+.nav .right {
+	text-align: right;
+	/*background-color: cadetblue;*/
+}
+
+.social-links {
+	font-size: 4rem;
+}
+.social-links a:link,
+.social-links a:visited {
+	margin-right: 1.5rem;
+	color: #f4f4f4;
+	transition: color 0.2s;
+	cursor: pointer;
+}
+.social-links a:hover,
+.social-links a:active {
+	color: #5ecea7;
+}
+
+.social-links a:last-child {
+	margin-right: 0;
+}
+.nav-btn a {
+	position: relative;
+	z-index: 101;
+	font-size: 5rem;
+	color: #f4f4f4;
+	transition: color 0.2s;
+	margin-right: 4rem;
+	cursor: pointer;
+}
+
+.nav-btn a:hover {
+	color: #f385b2;
+}
+
+/* HERO */
+
+.hero h1 {
+	font-size: 12rem;
+	font-weight: 400;
+	letter-spacing: 0.05em;
+	color: #fff;
+	margin: 0rem auto;
+}
+.hero h2 {
+	font-size: 3.4rem;
+	color: #cacaca;
+	margin: 0rem auto;
+}
+
+.welcome h2:after {
+	margin-top: 1rem;
+	height: 0.4rem;
+	width: 10rem;
+}
+
+/* FORM */
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+	font-size: 1.8rem;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	border: 0.1rem solid #ccc;
+}
+
+label {
+	margin-bottom: 1rem;
+}
+
+form button[type="submit"] {
+	padding: 10px 30px;
+	background-color: #5ecea7;
+	border: 1px solid #5ecea7;
+	border-radius: 200px;
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	font-weight: 300;
+	transition: background-color 0.2s, border 0.2s, color 0.2s;
+	cursor: pointer;
+}
+
+form button[type="submit"]:hover,
+form button[type="submit"]:active {
+	background-color: #69e9bc;
+	border: 1px solid #69e9bc;
+}
+
+/* FOOTER */
+footer h2 {
+	color: #fff;
+	font-weight: 300;
+	font-size: 8rem;
+	margin-top: 5rem;
+}
+
+footer h3 {
+	margin-bottom: 1rem;
+}
+
+footer {
+	background-image: linear-gradient(
+			0deg,
+			rgba(17, 16, 26, 1) 45%,
+			rgba(0, 0, 0, 0.4) 65%,
+			rgba(0, 0, 0, 0) 90%
+		),
+		url("../src/footer-background-2.png");
+	background-size: cover;
+	image-rendering: pixelated;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Loading Box */
+.loading {
+	text-align: center;
+}
