@@ -80,7 +80,7 @@ const ContactForm = () => {
 				</div>
 				<div>
 					<label>&nbsp;</label>
-					<button type="submit">
+					<button type="submit" disabled={loading}>
 						{loading ? (
 							<LoadingBox></LoadingBox>
 						) : success ? (

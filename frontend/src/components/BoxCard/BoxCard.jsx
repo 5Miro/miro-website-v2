@@ -12,7 +12,10 @@ const BoxCard = (props) => {
 			<div className={"col-1 large box-" + classModifier(!props.inverse)}>
 				<img
 					className={"card " + classModifier(!props.inverse)}
-					src="images/placeholder.png"
+					src={
+						`../../images/${props.thumbnail}.png` ||
+						"../../images/placeholder.png"
+					}
 					alt="thumbnail"
 				/>
 			</div>
@@ -21,8 +24,8 @@ const BoxCard = (props) => {
 
 	const rightSide = () => {
 		return (
-			<div className={"col-1 large box-" + classModifier(props.inverse)}>
-				<div className="info-container">
+			<div className={"col-1 large"}>
+				<div className={"info-container box-" + classModifier(props.inverse)}>
 					<h4>{props.name}</h4>
 					<p>{props.description}</p>
 					<div className="row">
@@ -45,6 +48,14 @@ const BoxCard = (props) => {
 			<div className="box-card row center">
 				{leftSide()}
 				{rightSide()}
+				<a
+					className="watch-btn"
+					href={props.repository}
+					target="_blank"
+					rel="noreferrer"
+				>
+					<FontAwesomeIcon icon={["far", "eye"]} />
+				</a>
 			</div>
 		);
 	} else {
@@ -52,6 +63,14 @@ const BoxCard = (props) => {
 			<div className="box-card row center">
 				{rightSide()}
 				{leftSide()}
+				<a
+					className="watch-btn"
+					href={props.repository}
+					target="_blank"
+					rel="noreferrer"
+				>
+					<FontAwesomeIcon icon={["far", "eye"]} />
+				</a>
 			</div>
 		);
 	}

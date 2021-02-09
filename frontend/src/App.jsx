@@ -5,17 +5,14 @@ import "./style.css";
 import "./queries.css";
 
 /* Font Awesome imports */
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faCheckSquare } from "@fortawesome/free-regular-svg-icons";
+import { faCheckSquare, faEye } from "@fortawesome/free-regular-svg-icons";
 import ContactForm from "./components/ContactForm/ContactForm";
 import SocialLinks from "./components/SocialLinks/SocialLinks";
 import ShapeTransition from "./components/ShapeTransition/ShapeTransition";
 import NavFullscreen from "./components/NavFullscreen/NavFullscreen";
 
-library.add(faCheckSquare);
+library.add(faCheckSquare, faEye);
 
 const App = () => {
 	return (
@@ -66,7 +63,7 @@ const App = () => {
 
 					<ShapeTransition color="#fff"></ShapeTransition>
 
-					<div className="row">
+					<div className="row white-bg">
 						{/*------ ABOUT ME SECTION ------*/}
 						<div className="col-1" id="aboutMe">
 							<div className="col-1 half-screen">

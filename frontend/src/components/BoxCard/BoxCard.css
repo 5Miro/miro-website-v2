@@ -7,6 +7,7 @@
 	transition: box-shadow 0.1s linear;
 	border-radius: 1.5rem;
 	flex-wrap: nowrap !important;
+	position: relative;
 }
 
 .box-card:hover {
@@ -15,21 +16,29 @@
 		0 8px 8px rgba(252, 81, 133, 0.2);
 }
 
+.box-card:hover img {
+	transform: scale(1);
+	opacity: 1;
+}
+
 .box-card > div {
 	position: relative;
 	max-width: 60rem;
 	padding-top: 33.33%;
+	overflow: hidden;
 }
 
 .box-left {
 	/*background-color: greenyellow;*/
-	background-image: linear-gradient(to bottom, #fff, #f4f4f4);
+	background: #000;
 	border-radius: 1.5rem 0 0 1.5rem;
+	z-index: 50;
 }
 .box-right {
 	/*background-color: greenyellow;*/
-	background-image: linear-gradient(to bottom, #fff, #f4f4f4);
+	background: #000;
 	border-radius: 0 1.5rem 1.5rem 0;
+	z-index: 50;
 }
 
 img.card {
@@ -40,14 +49,19 @@ img.card {
 	left: 0;
 	bottom: 0;
 	right: 0;
+	transform: scale(1.15);
+	transition: transform 0.5s, opacity 0.5s;
+	opacity: 0.7;
 }
 
 img.card.left {
 	border-radius: 1.5rem 0 0 1.5rem;
+	z-index: 50;
 }
 
 img.card.right {
 	border-radius: 0 1.5rem 1.5rem 0;
+	z-index: 50;
 }
 
 .info-container {
@@ -60,6 +74,7 @@ img.card.right {
 	align-items: center;
 	grid-template-columns: 1fr;
 	grid-template-rows: 2fr 1fr 2fr;
+	background-image: linear-gradient(to bottom, #fff, #f4f4f4);
 }
 
 .info-container .row {
@@ -91,4 +106,36 @@ img.card.right {
 
 .icon-pink {
 	color: #f385b2;
+}
+
+.watch-btn {
+	display: block;
+	background-color: #5ecea7;
+	width: auto;
+	height: auto;
+	padding: 0.3rem 0.5rem 0rem 0.5rem;
+	border-radius: 0.5rem 0.5rem 0 0;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12),
+		0 4px 4px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.2);
+
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 49;
+
+	color: #fff;
+	text-align: center;
+	font-size: 4rem;
+
+	transform: translate(-30%, -15%);
+	transition: transform 0.2s, background-color 0.5s;
+	transition-delay: 0.5s;
+}
+
+.box-card:hover > .watch-btn {
+	transform: translate(-30%, -100%);
+	transition-delay: 0s;
+}
+.watch-btn:hover {
+	background-color: #69e9bc;
 }

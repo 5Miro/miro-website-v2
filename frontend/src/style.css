@@ -106,7 +106,7 @@ header {
 	background-color: #11101a;
 	grid-template-columns: 1fr;
 	grid-template-rows: 8rem 1fr 12rem 12rem;
-	background-image: url("../src/hero-background.png");
+	background-image: url("../src/images/hero-background.png");
 	background-size: cover;
 	background-position-y: -80%;
 }
@@ -201,10 +201,6 @@ footer {
 	flex-direction: column;
 	margin: 1rem;
 }
-.col-1-title {
-}
-.col-1-content {
-}
 
 img {
 }
@@ -220,6 +216,10 @@ img.medium {
 
 img.large {
 	width: 100%;
+}
+
+.white-bg {
+	background-color: #fff;
 }
 
 /* NAV */
@@ -341,6 +341,10 @@ form button[type="submit"]:active {
 	background-color: #69e9bc;
 	border: 1px solid #69e9bc;
 }
+form button[type="submit"]:disabled {
+	background-color: #359c78;
+	border: 1px solid #359c78;
+}
 
 /* FOOTER */
 footer h2 {
@@ -361,7 +365,7 @@ footer {
 			rgba(0, 0, 0, 0.4) 65%,
 			rgba(0, 0, 0, 0) 90%
 		),
-		url("../src/footer-background-2.png");
+		url("../src/images/footer-background.png");
 	background-size: cover;
 	image-rendering: pixelated;
 	display: flex;
