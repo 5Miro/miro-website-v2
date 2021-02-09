@@ -11,7 +11,7 @@ projectRouter.get("/seed", expressAsyncHandler(async (req, res) => {
 }))
 
 projectRouter.get("/", expressAsyncHandler(async (req, res) => {
-    const data = await Project.find({});
+    const data = await Project.find({}).sort({ _id: 1 });
     res.send(data);
 }))
 

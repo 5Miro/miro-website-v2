@@ -7,6 +7,8 @@ import "./queries.css";
 /* Font Awesome imports */
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faCheckSquare, faEye } from "@fortawesome/free-regular-svg-icons";
+
+/* Component imports */
 import ContactForm from "./components/ContactForm/ContactForm";
 import SocialLinks from "./components/SocialLinks/SocialLinks";
 import ShapeTransition from "./components/ShapeTransition/ShapeTransition";

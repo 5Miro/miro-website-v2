@@ -5,8 +5,13 @@ import dotenv from "dotenv";
 
 import projectRouter from "./routers/projectRouter.js"
 import nodemailerRouter from "./routers/nodemailerRouter.js"
+import path from "path";
 
-// Get enviromental variables
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 dotenv.config();
 
 // Initialize express
@@ -25,7 +30,8 @@ mongoose.connect(DB, {
 }).then(con => {
     console.log("DB connection succesful.");
 }).catch(err => {
-    console.log("DB connection failed.")
+    console.log("DB connection failed." + err)
+
 });
 
 
@@ -35,8 +41,11 @@ app.use("/api/projects", projectRouter)
 
 app.use("/api/contact", nodemailerRouter)
 
+
+app.use(express.static(path.resolve(__dirname, "../frontend/build")));
+
 app.get("/", (req, res) => {
-    res.send("Server is ready");
+    res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
 });
 
 app.use((err, req, res, next) => {
