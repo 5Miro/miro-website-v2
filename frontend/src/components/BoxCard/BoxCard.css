@@ -2,8 +2,7 @@
 	/*background-color: orange;*/
 	max-width: 120rem;
 	margin: 8rem auto;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12),
-		0 4px 4px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.2);
 	transition: box-shadow 0.1s linear;
 	border-radius: 1.5rem;
 	flex-wrap: nowrap !important;
@@ -11,9 +10,7 @@
 }
 
 .box-card:hover {
-	box-shadow: 0 1px 1px rgba(252, 81, 133, 0.08),
-		0 2px 2px rgba(252, 81, 133, 0.12), 0 4px 4px rgba(252, 81, 133, 0.16),
-		0 8px 8px rgba(252, 81, 133, 0.2);
+	box-shadow: 0 1px 1px rgba(252, 81, 133, 0.08), 0 2px 2px rgba(252, 81, 133, 0.12), 0 4px 4px rgba(252, 81, 133, 0.16), 0 8px 8px rgba(252, 81, 133, 0.2);
 }
 
 .box-card:hover img {
@@ -115,8 +112,7 @@ img.card.right {
 	height: auto;
 	padding: 0.3rem 0.5rem 0rem 0.5rem;
 	border-radius: 0.5rem 0.5rem 0 0;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12),
-		0 4px 4px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.2);
 
 	position: absolute;
 	right: 0;
@@ -129,7 +125,7 @@ img.card.right {
 
 	transform: translate(-30%, -15%);
 	transition: transform 0.2s, background-color 0.5s;
-	transition-delay: 0.5s;
+	transition-delay: 0.3s;
 }
 
 .box-card:hover > .watch-btn {
