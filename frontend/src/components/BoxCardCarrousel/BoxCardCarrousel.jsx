@@ -34,6 +34,7 @@ const BoxCardCarrousel = () => {
 						description={work.description}
 						tech={work.tech}
 						repository={work.repository}
+						website={work.website}
 						thumbnail={work.thumbnail}
 						inverse={index % 2 !== 0}
 					/>

@@ -7,6 +7,7 @@ import "./queries.css";
 /* Font Awesome imports */
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faCheckSquare, faEye } from "@fortawesome/free-regular-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 /* Component imports */
 import ContactForm from "./components/ContactForm/ContactForm";
@@ -14,7 +15,7 @@ import SocialLinks from "./components/SocialLinks/SocialLinks";
 import ShapeTransition from "./components/ShapeTransition/ShapeTransition";
 import NavFullscreen from "./components/NavFullscreen/NavFullscreen";
 
-library.add(faCheckSquare, faEye);
+library.add(faCheckSquare, faEye, faGithub);
 
 const App = () => {
 	return (

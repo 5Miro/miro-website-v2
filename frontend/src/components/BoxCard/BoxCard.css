@@ -105,10 +105,10 @@ img.card.right {
 	color: #f385b2;
 }
 
-.watch-btn {
+.hover-btn {
 	display: block;
 	background-color: #5ecea7;
-	width: auto;
+	width: 4.5rem;
 	height: auto;
 	padding: 0.3rem 0.5rem 0rem 0.5rem;
 	border-radius: 0.5rem 0.5rem 0 0;
@@ -128,10 +128,14 @@ img.card.right {
 	transition-delay: 0.3s;
 }
 
-.box-card:hover > .watch-btn {
+.box-card:hover > .hover-btn {
 	transform: translate(-30%, -100%);
 	transition-delay: 0s;
 }
-.watch-btn:hover {
+.hover-btn:hover {
 	background-color: #69e9bc;
+}
+
+.hover-btn.repo {
+	right: 8rem;
 }

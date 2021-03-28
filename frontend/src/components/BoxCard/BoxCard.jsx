@@ -49,12 +49,20 @@ const BoxCard = (props) => {
 				{leftSide()}
 				{rightSide()}
 				<a
-					className="watch-btn"
-					href={props.repository}
+					className="hover-btn"
+					href={props.website}
 					target="_blank"
 					rel="noreferrer"
 				>
 					<FontAwesomeIcon icon={["far", "eye"]} />
+				</a>
+				<a
+					className="hover-btn repo"
+					href={props.repository}
+					target="_blank"
+					rel="noreferrer"
+				>
+					<FontAwesomeIcon icon={["fab", "github"]} />
 				</a>
 			</div>
 		);
@@ -64,12 +72,20 @@ const BoxCard = (props) => {
 				{rightSide()}
 				{leftSide()}
 				<a
-					className="watch-btn"
-					href={props.repository}
+					className="hover-btn"
+					href={props.website}
 					target="_blank"
 					rel="noreferrer"
 				>
 					<FontAwesomeIcon icon={["far", "eye"]} />
+				</a>
+				<a
+					className="hover-btn repo"
+					href={props.repository}
+					target="_blank"
+					rel="noreferrer"
+				>
+					<FontAwesomeIcon icon={["fab", "github"]} />
 				</a>
 			</div>
 		);
